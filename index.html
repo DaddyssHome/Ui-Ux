@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xclusive UI/UX Service</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Menambahkan Favicon -->
+    <link rel="icon" href="ikonik.png" type="image/png">
+    
+    <!-- Google Fonts (Opsional) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome (Untuk Ikon) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTTXwx6U6GbgYcB8dWODgAlT0MtkU9yqL34f6I6U8V1UkA7M2s5AQnNVmYkEVg35snqv0N2Kmg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <!-- Logo Tetap di Kiri -->
+            <img src="Log.png" class="logo" alt="Xclusive Logo">
+            
+            <!-- Menu Navigasi di Tengah -->
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#our-service">Our Service</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+            
+            <!-- Burger Menu untuk Mobile -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner" id="home">
+        <div class="content">
+            <h1>Welcome To <span>Xclusive UI/UX Service</span></h1>
+            <p>Better Days Coming For Sure.</p>
+            <div class="buttons">
+                <button onclick="window.location.href='#our-service';">Pelajari Lebih Lanjut</button>
+                <button onclick="window.location.href='#contact-us';">Call Us</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seksi Our Service -->
+    <section class="our-service" id="our-service">
+        <div class="container">
+            <h2>Our Service</h2>
+            <p>Kami menawarkan layanan UI/UX terbaik untuk meningkatkan pengalaman pengguna Anda.</p>
+            <div class="services">
+                <div class="service-item">
+                    <h3>Desain Responsif</h3>
+                    <p>Menciptakan desain yang tampak bagus di semua perangkat.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Prototyping</h3>
+                    <p>Membuat prototipe interaktif untuk pengujian pengguna.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Research Pengguna</h3>
+                    <p>Menganalisis kebutuhan dan perilaku pengguna untuk desain yang lebih baik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seksi Portfolio -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <p>Lihat beberapa proyek terbaru kami yang telah berhasil meningkatkan interaksi pengguna.</p>
+            <div class="portfolio-gallery">
+                <div class="portfolio-item">
+                    <!-- Menggunakan SVG jika tersedia -->
+                    <!-- <img src="logo1.svg" alt="Logo Project"> -->
+                    <!-- Atau menggunakan PNG dengan resolusi tinggi -->
+                    <img src="logma.jpg" alt="Logo Project">
+                    <h3>Logo Project</h3>
+                </div>
+                <div class="portfolio-item">
+                    <img src="banner.jpg" alt="Banner Project">
+                    <h3>Banner Design</h3>
+                </div>
+                <div class="portfolio-item">
+                    <img src="ikon.jpg" alt="Icon Project">
+                    <h3>Icon Creation</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seksi Order -->
+    <section class="order" id="order">
+        <div class="container">
+            <h2>Order</h2>
+            <p>Pesan layanan UI/UX Anda sekarang dan mulailah transformasi digital Anda.</p>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Nama Anda" required>
+                <input type="email" name="email" placeholder="Email Anda" required>
+                <textarea name="message" placeholder="Pesan Anda" rows="5" required></textarea>
+                <button type="submit">Kirim Pesanan</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Seksi Contact Us -->
+    <section class="contact-us" id="contact-us">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Hubungi kami untuk konsultasi gratis atau pertanyaan lebih lanjut.</p>
+            <div class="contact-info">
+                <p><i class="fas fa-phone"></i> +62 123 4567 8901</p>
+                <p><i class="fas fa-envelope"></i> info@xclusiveuiux.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Xclusive UI/UX Service. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript untuk Burger Menu -->
+    <script>
+        const menu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.navbar ul');
+
+        menu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menu.classList.toggle('is-active');
+        });
+    </script>
+</body>
+</html>

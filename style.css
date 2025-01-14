@@ -1,0 +1,454 @@
+/* Reset CSS */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* Menambahkan smooth scrolling */
+}
+
+/* Navbar Styling */
+.navbar {
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Memusatkan menu navigasi */
+    position: fixed; /* Membuat navbar tetap di atas saat scroll */
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Background semi-transparan */
+    z-index: 999; /* Agar navbar tetap di atas elemen lainnya */
+}
+
+/* Logo Tetap di Kiri */
+.navbar .logo {
+    position: absolute;
+    left: 50px;
+    height: 60px; /* Sesuaikan dengan tinggi navbar */
+    width: auto;
+    cursor: pointer;
+}
+
+/* Menu Navigasi di Tengah */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: #ffcc00;
+}
+
+/* Burger Menu Styling */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1000; /* Agar tetap di atas elemen lainnya */
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Banner Styling */
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 100px; /* Memberikan ruang untuk navbar tetap */
+}
+
+/* Konten Banner */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    max-width: 800px;
+}
+
+.content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.content h1 span {
+    color: #ffcc00;
+}
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.buttons button:first-child {
+    background-color: #ffcc00;
+    color: black;
+}
+
+.buttons button:last-child {
+    background-color: transparent;
+    border: 1px solid #ffcc00;
+    color: white;
+}
+
+.buttons button:last-child:hover {
+    background-color: #ffcc00;
+    color: black;
+}
+
+/* Styling Seksi Baru */
+section {
+    padding: 100px 20px;
+    min-height: 100vh;
+}
+
+.our-service, .portfolio, .order, .contact-us {
+    text-align: center;
+}
+
+/* Styling Our Service */
+.our-service {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('bckg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.our-service .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.our-service h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff; /* Warna teks putih agar kontras dengan background */
+}
+
+.our-service p {
+    font-size: 18px;
+    color: #ddd; /* Warna teks lebih terang */
+    max-width: 800px;
+    margin: auto;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-item {
+    background-color: rgba(255, 255, 255, 0.1); /* Transparan putih */
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px); /* Efek blur */
+}
+
+.service-item h3 {
+    margin-bottom: 10px;
+    color: #ffcc00; /* Warna judul layanan */
+}
+
+.service-item p {
+    color: #ddd;
+}
+
+/* Styling Portfolio */
+.portfolio {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.portfolio .portfolio-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.portfolio .portfolio-item {
+    width: 300px;
+    text-align: center;
+    background-color: #fff; /* Background putih untuk setiap item */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio .portfolio-item img {
+    width: 100%;
+    max-width: 300px; /* Sesuaikan dengan ukuran gambar asli */
+    height: auto; /* Biarkan tinggi menyesuaikan proporsional */
+    border-radius: 8px;
+    object-fit: contain; /* Atau 'cover' jika diinginkan */
+}
+
+.portfolio .portfolio-item h3 {
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Styling Order */
+.order {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('bckg1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.order .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.order h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.order p {
+    font-size: 18px;
+    color: #ddd;
+    max-width: 800px;
+    margin: auto;
+}
+
+.order form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+.order form input, 
+.order form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.order form button {
+    padding: 10px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.order form button:hover {
+    background-color: #ffc300;
+}
+
+/* Styling Contact Us */
+.contact-us {
+    background-image: none; /* Menghapus background image */
+    background-color: #f4f4f4; /* Mengganti dengan warna solid */
+    color: #333;
+}
+
+.contact-us .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact-us h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-us p {
+    font-size: 18px;
+    color: #555;
+}
+
+.contact-info {
+    margin-top: 40px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.contact-info p i {
+    margin-right: 10px;
+    color: #ffcc00;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    .navbar {
+        width: 90%;
+        padding: 15px 0;
+        background-color: rgba(0, 0, 0, 0.9); /* Lebih gelap untuk mobile */
+    }
+
+    /* Menu Navigasi untuk Mobile */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 200px;
+        border-radius: 8px;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    /* Tampilkan Burger Menu */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Animasi Burger Menu */
+    .menu-toggle.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.is-active .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.is-active .bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Animasi Fade In */
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    /* Our Service Responsiveness */
+    .our-service .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 80%;
+    }
+
+    /* Portfolio Responsiveness */
+    .portfolio .portfolio-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio .portfolio-item {
+        width: 80%;
+    }
+
+    /* Order Responsiveness */
+    .order .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Contact Us Responsiveness */
+    .contact-us .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 32px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .buttons button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    section {
+        padding: 80px 10px;
+    }
+
+    .our-service h2, .portfolio h2, .order h2, .contact-us h2 {
+        font-size: 28px;
+    }
+
+    .our-service p, .portfolio p, .order p, .contact-us p {
+        font-size: 16px;
+    }
+}
